@@ -1,0 +1,1 @@
+<img class="img-footer mt-5" src="styles/img/icon/logo.png" width="320" height="95px">

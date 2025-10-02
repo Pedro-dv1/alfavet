@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doce Sabor - Confeitaria Artesanal</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #ff6b8b;
+            --secondary-color: #ffd166;
+            --accent-color: #a8dadc;
+            --dark-color: #2a2d34;
+            --light-color: #f8f9fa;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--dark-color);
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 600;
+        }
+        
+        .logo-font {
+            font-family: 'Dancing Script', cursive;
+            font-weight: 700;
+        }
+        
+        .bg-primary-custom {
+            background-color: var(--primary-color) !important;
+        }
+        
+        .text-primary-custom {
+            color: var(--primary-color) !important;
+        }
+        
+        .btn-primary-custom {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            color: white;
+        }
+        
+        .btn-primary-custom:hover {
+            background-color: #ff5577;
+            border-color: #ff5577;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1089&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+        
+        .section-padding {
+            padding: 5rem 0;
+        }
+        
+        .card-hover {
+            transition: transform 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-10px);
+        }
+        
+        .product-card {
+            border: none;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .product-card img {
+            transition: transform 0.5s ease;
+        }
+        
+        .product-card:hover img {
+            transform: scale(1.05);
+        }
+        
+        .testimonial-card {
+            border-left: 5px solid var(--primary-color);
+        }
+        
+        .footer {
+            background-color: var(--dark-color);
+            color: white;
+        }
+        
+        .social-icons a {
+            color: white;
+            font-size: 1.5rem;
+            margin-right: 15px;
+            transition: color 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            color: var(--primary-color);
+        }
+        
+        .nav-link {
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: var(--primary-color) !important;
+        }
+        
+        .navbar-brand {
+            font-size: 2rem;
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 3rem;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+        
+        .about-img {
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .floating-button {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 100;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .floating-button:hover {
+            transform: scale(1.1);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand logo-font text-primary-custom" href="#">Doce Sabor</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#products">Produtos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Serviços</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonials">Depoimentos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contato</a>
+                    </li>
+                </ul>
+                <a href="#contact" class="btn btn-primary-custom ms-lg-3 mt-3 mt-lg-0">Encomendar</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h1 class="display-3 fw-bold mb-4">Bolos que <span class="logo-font text-warning">Encantam</span> seu Paladar</h1>
+                    <p class="lead mb-4">Confeitaria artesanal com receitas exclusivas e ingredientes selecionados para criar momentos doces e inesquecíveis.</p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="#products" class="btn btn-primary-custom btn-lg">Ver Produtos</a>
+                        <a href="#contact" class="btn btn-outline-light btn-lg">Fazer Encomenda</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <img src="https://images.unsplash.com/photo-1555507036-ab794f27d2e9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Sobre a Doce Sabor" class="img-fluid about-img">
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="section-title">Nossa História</h2>
+                    <p class="mb-4">Há mais de 15 anos, a Doce Sabor transforma momentos especiais em experiências únicas através da confeitaria artesanal. Nossa paixão por criar bolos deliciosos e visualmente impressionantes nos tornou referência na região.</p>
+                    <p class="mb-4">Utilizamos apenas ingredientes de alta qualidade, sem conservantes artificiais, garantindo sabor autêntico e frescor em cada fatia. Nossa equipe de confeiteiros talentosos está sempre inovando com novas receitas e técnicas.</p>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <div class="d-flex align-items-center">
+                                <div class="bg-primary-custom rounded-circle p-3 me-3">
+                                    <i class="bi bi-award-fill text-white fs-4"></i>
+                                </div>
+                                <div>
+                                    <h5 class="mb-1">Qualidade Garantida</h5>
+                                    <p class="mb-0">Ingredientes selecionados</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="d-flex align-items-center">
+                                <div class="bg-primary-custom rounded-circle p-3 me-3">
+                                    <i class="bi bi-heart-fill text-white fs-4"></i>
+                                </div>
+                                <div>
+                                    <h5 class="mb-1">Feito com Amor</h5>
+                                    <p class="mb-0">Cada detalhe é especial</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="section-padding">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="section-title text-center">Nossos Produtos</h2>
+                    <p class="lead">Descubra nossa variedade de bolos, tortas e doces feitos com técnicas artesanais e muito carinho.</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card product-card card-hover h-100">
+                        <img src="https://images.unsplash.com/photo-1571115764595-644a1f56a55c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" class="card-img-top" alt="Bolo de Chocolate">
+                        <div class="card-body">
+                            <h5 class="card-title">Bolo de Chocolate Belga</h5>
+                            <p class="card-text">Camadas de massa de chocolate belga com recheio de ganache e cobertura de chocolate meio amargo.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h5 text-primary-custom mb-0">R$ 85,00</span>
+                                <a href="#contact" class="btn btn-primary-custom">Encomendar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card product-card card-hover h-100">
+                        <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" class="card-img-top" alt="Bolo de Morango">
+                        <div class="card-body">
+                            <h5 class="card-title">Bolo Red Velvet</h5>
+                            <p class="card-text">Massa aveludada vermelha com camadas de cream cheese e cobertura de buttercream.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h5 text-primary-custom mb-0">R$ 95,00</span>
+                                <a href="#contact" class="btn btn-primary-custom">Encomendar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card product-card card-hover h-100">
+                        <img src="https://images.unsplash.com/photo-1586788680434-30d324b2d46f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" class="card-img-top" alt="Bolo de Limão">
+                        <div class="card-body">
+                            <h5 class="card-title">Torta de Limão Siciliano</h5>
+                            <p class="card-text">Massa crocante de biscoito, recheio cremoso de limão siciliano e merengue italiano.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h5 text-primary-custom mb-0">R$ 65,00</span>
+                                <a href="#contact" class="btn btn-primary-custom">Encomendar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <a href="#contact" class="btn btn-outline-primary-custom btn-lg">Ver Todos os Produtos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section-padding bg-light">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="section-title text-center">Nossos Serviços</h2>
+                    <p class="lead">Oferecemos uma variedade de serviços para atender todas as suas necessidades doces.</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card border-0 bg-white text-center p-4 h-100 card-hover">
+                        <div class="card-body">
+                            <div class="bg-primary-custom rounded-circle p-3 d-inline-flex mb-4">
+                                <i class="bi bi-cake2-fill text-white fs-2"></i>
+                            </div>
+                            <h5 class="card-title">Bolos Personalizados</h5>
+                            <p class="card-text">Criamos bolos únicos para suas celebrações especiais, desde aniversários até casamentos.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-0 bg-white text-center p-4 h-100 card-hover">
+                        <div class="card-body">
+                            <div class="bg-primary-custom rounded-circle p-3 d-inline-flex mb-4">
+                                <i class="bi bi-box-seam-fill text-white fs-2"></i>
+                            </div>
+                            <h5 class="card-title">Kits Presente</h5>
+                            <p class="card-text">Surpreenda alguém especial com nossos kits de doces finos e caixas de brownie gourmet.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-0 bg-white text-center p-4 h-100 card-hover">
+                        <div class="card-body">
+                            <div class="bg-primary-custom rounded-circle p-3 d-inline-flex mb-4">
+                                <i class="bi bi-truck text-white fs-2"></i>
+                            </div>
+                            <h5 class="card-title">Entrega em Domicílio</h5>
+                            <p class="card-text">Entregamos seus pedidos com todo cuidado para preservar a qualidade e apresentação.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section-padding">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="section-title text-center">O que Nossos Clientes Dizem</h2>
+                    <p class="lead">A satisfação dos nossos clientes é a nossa maior recompensa.</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card border-0 bg-light p-4 h-100">
+                        <div class="card-body">
+                            <div class="testimonial-card ps-3">
+                                <p class="card-text mb-4">"O bolo de aniversário da minha filha foi um sucesso! Além de lindo, estava delicioso. Todos elogiaram!"</p>
+                                <div class="d-flex align-items-center">
+                                    <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Maria Silva" class="rounded-circle me-3" width="50">
+                                    <div>
+                                        <h6 class="mb-0">Maria Silva</h6>
+                                        <small class="text-muted">Cliente há 3 anos</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card border-0 bg-light p-4 h-100">
+                        <div class="card-body">
+                            <div class="testimonial-card ps-3">
+                                <p class="card-text mb-4">"Sempre encomendo os doces para as reuniões da empresa. São um sucesso absoluto com a equipe!"</p>
+                                <div class="d-flex align-items-center">
+                                    <img src="https://randomuser.me/api/portraits/men/54.jpg" alt="João Santos" class="rounded-circle me-3" width="50">
+                                    <div>
+                                        <h6 class="mb-0">João Santos</h6>
+                                        <small class="text-muted">Cliente Corporativo</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card border-0 bg-light p-4 h-100">
+                        <div class="card-body">
+                            <div class="testimonial-card ps-3">
+                                <p class="card-text mb-4">"O bolo de casamento foi perfeito! Exatamente como imaginávamos e o sabor era incrível. Recomendo!"</p>
+                                <div class="d-flex align-items-center">
+                                    <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Ana Costa" class="rounded-circle me-3" width="50">
+                                    <div>
+                                        <h6 class="mb-0">Ana Costa</h6>
+                                        <small class="text-muted">Noiva Satisfeita</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center mb-5">
+                    <h2 class="section-title text-center">Faça sua Encomenda</h2>
+                    <p class="lead">Entre em contato conosco para solicitar orçamentos ou fazer encomendas.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="card border-0 shadow">
+                        <div class="card-body p-5">
+                            <form>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label for="name" class="form-label">Nome Completo</label>
+                                        <input type="text" class="form-control" id="name" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="phone" class="form-label">Telefone</label>
+                                        <input type="tel" class="form-control" id="phone" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="email" class="form-label">E-mail</label>
+                                        <input type="email" class="form-control" id="email" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="product" class="form-label">Produto de Interesse</label>
+                                        <select class="form-select" id="product" required>
+                                            <option selected disabled value="">Selecione um produto</option>
+                                            <option>Bolo de Chocolate Belga</option>
+                                            <option>Bolo Red Velvet</option>
+                                            <option>Torta de Limão Siciliano</option>
+                                            <option>Bolo Personalizado</option>
+                                            <option>Kit Presente</option>
+                                            <option>Outro</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="message" class="form-label">Mensagem</label>
+                                        <textarea class="form-control" id="message" rows="5" required></textarea>
+                                    </div>
+                                    <div class="col-12 text-center mt-4">
+                                        <button type="submit" class="btn btn-primary-custom btn-lg px-5">Enviar Encomenda</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer pt-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <h3 class="logo-font text-primary-custom mb-3">Doce Sabor</h3>
+                    <p class="mb-4">Confeitaria artesanal criando momentos doces e inesquecíveis há mais de 15 anos.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="mb-3">Links Rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#home" class="text-white text-decoration-none">Início</a></li>
+                        <li class="mb-2"><a href="#about" class="text-white text-decoration-none">Sobre</a></li>
+                        <li class="mb-2"><a href="#products" class="text-white text-decoration-none">Produtos</a></li>
+                        <li class="mb-2"><a href="#services" class="text-white text-decoration-none">Serviços</a></li>
+                        <li class="mb-2"><a href="#contact" class="text-white text-decoration-none">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="mb-3">Horário de Funcionamento</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">Segunda a Sexta: 8h às 19h</li>
+                        <li class="mb-2">Sábados: 8h às 18h</li>
+                        <li class="mb-2">Domingos: 9h às 13h</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="mb-3">Contato</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="bi bi-geo-alt-fill me-2"></i> Rua das Flores, 123 - Centro</li>
+                        <li class="mb-2"><i class="bi bi-telephone-fill me-2"></i> (11) 3456-7890</li>
+                        <li class="mb-2"><i class="bi bi-whatsapp me-2"></i> (11) 98765-4321</li>
+                        <li class="mb-2"><i class="bi bi-envelope-fill me-2"></i> contato@docesabor.com</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2023 Doce Sabor. Todos os direitos reservados.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0">Desenvolvido com <i class="bi bi-heart-fill text-primary-custom"></i> para amantes de doces</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/5511987654321" class="floating-button" target="_blank">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
