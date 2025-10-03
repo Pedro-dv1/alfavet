@@ -1,0 +1,58 @@
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .carousel-img {
+        height: 50vh !important;
+        min-height: 300px !important;
+    }
+    
+    .altnav .tel,
+    .altnav .rsocial {
+        font-size: 0.875rem;
+    }
+    
+    #services .cd {
+        margin-bottom: 2rem;
+    }
+    
+    #depo .carousel-item p {
+        font-size: 1rem !important;
+    }
+}
+
+@media (max-width: 992px) and (min-width: 768px) {
+    .altnav .row {
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .floating-btn {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+@media (min-width: 375px){
+    #agend .btn{
+        width: 100%;
+    }
+}
+
+@media (max-width: 375px){
+    #agend .btn{
+        width: 100%;
+    }
+}
+
+@media (max-width: 425px) {
+  .altnav .tel,
+  .altnav .rsocial {
+    display: none !important;
+  }
+}
