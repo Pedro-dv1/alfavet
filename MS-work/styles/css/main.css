@@ -1,0 +1,532 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+.altnav {
+    height: 120px;
+}
+
+.imlogo {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+nav {
+    background-color: #ffb300;
+    font-weight: bolder;
+}
+
+.navbar-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.navbar-collapse {
+    display: block;
+}
+
+@media (min-width: 992px) {
+    .navbar-nav {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 4rem;
+        width: 100%;
+    }
+
+    .navbar-collapse {
+        display: flex !important;
+        justify-content: center;
+    }
+}
+
+
+
+.tel {
+    margin-top: 28px;
+    padding-left: 10px;
+    font-size: 14px;
+}
+
+.tel img {
+    display: inline-block;
+}
+
+.tel span {
+    font-weight: 500;
+    color: #3e3d3d;
+}
+
+.rsocial {
+    margin-top: 30px;
+    font-family: sans-serif;
+    font-weight: 500;
+}
+
+.carousel-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-bottom-left-radius: 15%;
+    border-bottom-right-radius: 15%;
+}
+
+.cookie-consent {
+    transform: translateY(110%);
+    transition: transform 300ms ease;
+    z-index: 1080;
+}
+
+.cookie-consent.show {
+    transform: translateY(0);
+}
+
+@media (min-width: 992px) {
+    .cookie-consent .card {
+        margin: 0 auto;
+        max-width: 900px;
+        border-radius: .5rem;
+    }
+}
+
+.floating-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.floating-btn img {
+    width: 50px;
+    height: 50px;
+}
+
+@media (max-width: 768px) {
+    .floating-btn {
+        bottom: 15px;
+        right: 15px;
+        padding: 8px;
+    }
+
+    .floating-btn img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 425px) {
+    .floating-btn {
+        bottom: 10px;
+        right: 10px;
+        padding: 28px;
+    }
+
+    .floating-btn img {
+        width: 38px;
+        height: 38px;
+    }
+}
+
+#services {
+    background-color: #fff;
+    padding: 60px 20px;
+}
+
+#services h1 {
+    font-size: 2rem;
+}
+
+.cards-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.service-card {
+    background-color: #f0f0f0;
+    border: 1px solid #c7c8cc;
+    border-radius: 32px;
+    padding: 60px 20px;
+    max-width: 370px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.service-icon {
+    width: 64px;
+    height: auto;
+    margin-bottom: 30px;
+}
+
+.service-card p {
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .cards-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+#depo {
+    position: relative;
+    background-color: #e6e8eb;
+    height: 480px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 5px 10px 0px #00000025;
+}
+
+#depo .carousel-inner {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#depo p {
+    font-style: italic;
+    color: #555;
+    font-size: 1.3rem;
+    line-height: 1.6;
+    margin: 0 20px;
+}
+
+#depo strong {
+    display: block;
+    margin-top: 15px;
+    color: #333;
+    font-size: 1rem;
+}
+
+#depo .stars img {
+    width: 190px !important;
+}
+
+.imgct img {
+    width: 240px;
+}
+
+#ctfct {
+    height: 420px;
+    display: flex;
+    align-items: center;
+}
+
+#agend {
+    height: auto;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    margin-bottom: 60px;
+    box-shadow: 0 5px 10px 0px #00000025;
+    padding: 30px;
+}
+
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+    resize: none;
+    overflow: hidden;
+}
+
+#agend .btn {
+    width: 145px;
+}
+
+footer,
+footer .container-fluid,
+footer .row {
+    height: 240px;
+}
+
+footer {
+    box-shadow: 0 5px 10px 10px #00000025;
+    background-color: #f0f0f0;
+}
+
+.separator-line {
+    width: 85%;
+    height: 2px;
+    background-color: #c5c5c5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    position: relative;
+    bottom: 10%;
+}
+
+.card-custom {
+    max-width: 400px;
+    margin: 20px auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    border: none;
+    transition: transform 0.3s ease;
+}
+
+.card-custom:hover {
+    transform: translateY(-5px);
+}
+
+.badges-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+}
+
+.badge-credenciadas {
+    background-color: #6c757d;
+    color: white;
+    font-size: 0.75rem;
+    padding: 6px 12px;
+    border-radius: 0 0 0 6px;
+}
+
+.badge-desconto {
+    background-color: #ffb600;
+    color: black;
+    font-size: 0.75rem;
+    padding: 6px 12px;
+    border-radius: 0;
+}
+
+.clinica-text {
+    color: #ffb600;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    letter-spacing: 0.5px;
+}
+
+.turma-text {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #212529;
+}
+
+.local-text {
+    color: #6c757d;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.card-footer-custom {
+    background-color: #f8f9fa;
+    padding: 15px 20px;
+    border-top: 1px solid #e9ecef;
+}
+
+.rating {
+    color: #ffb600;
+    font-size: 1.1rem;
+}
+
+.btn-contato {
+    background-color: #ffb600;
+    color: black;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-contato:hover {
+    background-color: #e6a400;
+    transform: scale(1.03);
+}
+
+.icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 182, 0, 0.1);
+    border-radius: 50%;
+    color: #ffb600;
+    font-size: 1.5rem;
+    margin-left: auto;
+}
+
+.card-body-custom {
+    padding: 25px 20px 20px;
+    position: relative;
+}
+
+.content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.text-content {
+    flex: 1;
+}
+
+#search-input:focus {
+  outline: none !important;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+  border-color: #999;
+}
+
+.form-select:focus {
+  outline: none !important;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+  border-color: #999;
+}
+
+.privacy-header {
+    background-color: #e6e8eb;
+    color: #000;
+    padding: 3rem 0;
+}
+
+.section-title {
+    color: #343a40;
+    border-bottom: 2px solid #ffb600;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.privacy-card {
+    border: none;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.privacy-card .card-header {
+    background-color: #e6e8eb;
+    color: #000;
+    border-radius: 8px 8px 0 0 !important;
+    border-bottom: 3px solid #ffb600;
+}
+
+.highlight-box {
+    background-color: #f8f9fa;
+    border-left: 4px solid #ffb600;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 0 8px 8px 0;
+}
+
+.contact-info {
+    background-color: #e9ecef;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    border: 1px solid #e6e8eb;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #ffb600;
+    color: #343a40;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 1000;
+    font-weight: bold;
+}
+
+.back-to-top:hover {
+    background-color: #e6e8eb;
+    color: #ffb600;
+}
+
+.privacy-card .btn-primary {
+    background-color: #ffb600;
+    border-color: #ffb600;
+    color: #343a40;
+    font-weight: 500;
+}
+
+.privacy-card .btn-primary:hover {
+    background-color: #757a80;
+    border-color: #757a80;
+    color: #ffb600;
+}
+
+.privacy-card .alert-info {
+    background-color: #f8f9fa;
+    border-color: #ffb600;
+    color: #343a40;
+}
+
+.privacy-card .card.bg-light {
+    background-color: #e9ecef !important;
+}
+
+@media (max-width: 768px) {
+    .privacy-header {
+        padding: 2rem 0;
+    }
+    
+    .back-to-top {
+        bottom: 15px;
+        left: 15px;
+        width: 45px;
+        height: 45px;
+    }
+}
+
+#sobre-clinica {
+    background-color: #fff;
+}
+
+#servicos-especializados .card {
+    transition: transform 0.3s ease;
+}
+
+#servicos-especializados .card:hover {
+    transform: translateY(-5px);
+}
+
+#faqs .accordion-button:not(.collapsed) {
+    background-color: #ffb600;
+    color: #000;
+}
+
+#faqs .accordion-button:focus {
+    box-shadow: 0 0 0 0.1rem rgba(255, 182, 0, 0.1);
+}
+
+#agendamento {
+    background-color: #f0f0f0;
+}
+

@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/css/bootstrap.css">
+    <link rel="stylesheet" href="styles/css/main.css">
+    <link rel="stylesheet" href="styles/css/media.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="shortcut icon" href="styles/img/icon/logo.ico" type="image/x-icon">
+    <title>ALFAVET</title>
+    <style>
+        @media (max-width: 425px){
+            .gp{
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!--WhatsApp Button-->
+
+    <a id="whatsapp-btn" href="#" class="floating-btn whatsapp-btn" target="_blank">
+        <img src="styles/img/icon/wa-icon2.png" alt="WhatsApp">
+    </a>
+
+    <!---->
+    <header>
+        <div class="altnav">
+            <div class="container-fluid">
+                <div class="row align-items-center py-2">
+                    <div class="col-12 col-md-5 col-lg-4 text-center text-md-start mb-2 mb-md-0">
+                        <img src="styles/img/icon/logo.png" class="imlogo img-fluid" alt="ALFAVET"
+                            style="max-height: 60px;">
+                    </div>
+                    <div
+                        class="col-12 col-md-4 col-lg-4 tel d-flex flex-column flex-sm-row justify-content-center justify-content-md-start align-items-center align-items-md-start gap-2 gap-sm-3 mb-2 mb-md-0">
+                        <div class="d-flex align-items-center">
+                            <img src="styles/img/icon/phone.png" alt="Telefone" width="18" class="me-2">
+                            <small><strong>(11) 8173-4892 / (11) 3124-5920</strong></small>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <img src="styles/img/icon/whatsapp.png" alt="WhatsApp" width="20" class="me-2">
+                            <small><strong>(17) 99742-9306</strong></small>
+                        </div>
+                    </div>
+                    <div
+                        class="col-12 col-md-3 col-lg-4 rsocial d-flex flex-column flex-sm-row justify-content-center justify-content-md-end align-items-center gap-2">
+                        <div class="d-flex align-items-center me-0 me-sm-3">
+                            <img src="styles/img/icon/instagram.png" alt="instagram" width="20" class="me-2">
+                            <small><strong>alfavet@oficial</strong></small>
+                        </div>
+                        <button type="button" style="border: none; background: none;" class="btn btn-primary btn-sm"
+                            data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <img src="styles/img/icon/user.png" alt="">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="loc.html">Redes ALFAVET</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="srv.html">Serviços</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="cont.html">Contato</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="pl.html">Política de Privacidade</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!--Login-->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Entrar</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="recipient-name" class="col-form-label">Email</label>
+                                <input type="text" class="form-control" id="recipient-name"
+                                    placeholder="Informe seu E-mail" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="recipient-name" class="col-form-label">Senha</label>
+                                <input type="text" class="form-control" id="recipient-name"
+                                    placeholder="Informe sua Senha" required>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary w-100">Entrar</button>
+                        <div class="d-flex align-items-center w-100">
+                            <hr class="flex-grow-1">
+                            <span class="mx-2">ou</span>
+                            <hr class="flex-grow-1">
+                        </div>
+                        <button id="google-login-btn" style="color: #000;"
+                            class="btn btn-outline-warning w-100 d-flex align-items-center justify-content-center gap-2 mt-3">
+                            <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg"
+                                alt="Google icon" style="width: 20px; height: 20px;">
+                            Entrar com o Google
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!---->
+
+        <section class="privacy-header">
+            <div class="container text-center">
+                <h1 class="display-4 fw-bold">Política de Privacidade</h1>
+                <p class="lead">Sua privacidade é importante para nós. Conheça como protegemos suas informações.</p>
+            </div>
+        </section>
+
+        <div class="container my-5">
+            <div class="row">
+                <div class="col-12">
+                    <!-- Introdução -->
+                    <div class="card privacy-card mb-4">
+                        <div class="card-header">
+                            <h3 id="introducao" class="mb-0">Introdução</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>A sua privacidade é importante para nós. É política da ALFAVET respeitar a sua
+                                privacidade em relação a qualquer informação sua que possamos coletar no site da ALFAVET
+                                e outros sites e serviços que possuímos e operamos.</p>
+
+                            <p>Esta Política de Privacidade se aplica exclusivamente ao site, portal de serviços,
+                                comunicações e anúncios da ALFAVET – no contexto desta Política, todos resumidos como
+                                "serviço", "serviços" ou "Site" –, com exceção dos serviços que declarem ser oferecidos
+                                de acordo com uma política de privacidade diferente.</p>
+
+                            <p>Como visitante ou usuário do nosso Site, a coleta, o uso e o compartilhamento dos seus
+                                dados pessoais ficarão sujeitos a esta Política de Privacidade e suas atualizações.</p>
+
+                            <div class="highlight-box">
+                                <p><strong>Importante:</strong> O uso dos serviços disponíveis pela ALFAVET será
+                                    considerado como o aceite de nossas práticas em torno de privacidade e dados
+                                    pessoais, constantes nesta Política de Privacidade.</p>
+                            </div>
+
+                            <p>Você é livre para recusar a nossa solicitação de dados pessoais, entendendo que talvez
+                                não possamos fornecer alguns dos serviços desejados.</p>
+                        </div>
+                    </div>
+
+                    <!-- Informações Coletadas -->
+                    <div class="card privacy-card mb-4">
+                        <div class="card-header">
+                            <h3 id="informacoes" class="mb-0">Informações Coletadas</h3>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="section-title">Quais informações você nos fornece</h5>
+                            <p>Ao utilizar os formulários disponíveis em nosso Site, você fornecerá dados que podem
+                                incluir:</p>
+                            <ul>
+                                <li>Nome e imagem pessoal</li>
+                                <li>Número de documento ou identificação válida</li>
+                                <li>Informações de contato (como número de telefone, endereço e endereço de e-mail)</li>
+                                <li>Informações e meios de pagamento</li>
+                                <li>Informações sobre seu animal ("pet")</li>
+                            </ul>
+
+                            <div class="alert alert-info">
+                                <p><strong>Atenção:</strong> O fornecimento dos dados acima não é obrigatório; porém, é
+                                    um requisito essencial para contratar e/ou se relacionar com a ALFAVET. Caso essas
+                                    informações não sejam fornecidas, nossa capacidade de oferecer nossos serviços será
+                                    comprometida ou até mesmo inviabilizada.</p>
+                            </div>
+
+                            <p>Nossos serviços incluem serviços de acesso público, incluindo blogs e fóruns. Você deve
+                                estar ciente de que qualquer informação que você forneça nessas áreas pode ser lida,
+                                coletada e usada por outras pessoas que as acessam. Suas postagens podem permanecer
+                                mesmo depois que você cancele a sua conta. Em alguns casos, podemos tornar anônimas as
+                                suas informações pessoais para que estas não possam mais ser associadas a você e, nesse
+                                caso, estas não mais serão dados pessoais.</p>
+
+                            <h5 class="section-title mt-4">Quais informações coletamos automaticamente</h5>
+                            <p>Quando você acessa nosso Site, também recebemos o seu endereço de IP, a fim de obter
+                                informações que nos ajudam a aprender sobre seu navegador, sistema operacional e
+                                experiência de utilização.</p>
+
+                            <p>Também, quando você usa os nossos serviços, podemos acessar, coletar, monitorar e/ou
+                                armazenar remotamente "dados de localização", que podem incluir coordenadas GPS (por
+                                exemplo, latitude e/ou longitude) ou informações semelhantes sobre a localização do seu
+                                dispositivo. Os dados de localização podem nos transmitir informações sobre como você
+                                navega pelos serviços. Os dados de localização não coletam ou compartilham qualquer
+                                informação pessoal identificável sobre você. Os dados de localização podem ser usados em
+                                conjunto com informações pessoalmente identificáveis. Alguns recursos dos serviços,
+                                particularmente aqueles baseados em localização, podem não funcionar corretamente se o
+                                uso ou a disponibilidade de dados de localização for prejudicada ou desativada.</p>
+                        </div>
+                    </div>
+
+                    <!-- Uso dos Dados -->
+                    <div class="card privacy-card mb-4">
+                        <div class="card-header">
+                            <h3 id="uso-dados" class="mb-0">Como Utilizamos Seus Dados</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>Os dados que você nos fornece poderão ser usados para o seguinte:</p>
+
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <div class="card h-100 border-0 bg-light">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Contratação de plano de saúde animal</h5>
+                                            <p class="card-text">Os dados serão utilizados para validação das
+                                                informações, montagem do contrato, utilização do plano e controles
+                                                financeiros e fiscais.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <div class="card h-100 border-0 bg-light">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Desenvolvimento de serviços e pesquisa</h5>
+                                            <p class="card-text">Usamos dados, inclusive o feedback público, para
+                                                conduzir pesquisas e desenvolver nossos serviços.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <div class="card h-100 border-0 bg-light">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Comunicação</h5>
+                                            <p class="card-text">Poderemos enviar a você mensagens por e-mail, celular,
+                                                avisos publicados em nossos sites ou aplicativos.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <div class="card h-100 border-0 bg-light">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Marketing</h5>
+                                            <p class="card-text">Usamos os dados e conteúdos dos usuários em convites e
+                                                comunicações que promovam a afiliação e o crescimento da rede.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <div class="card h-100 border-0 bg-light">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Suporte ao cliente</h5>
+                                            <p class="card-text">Usamos os dados (que podem incluir suas mensagens) para
+                                                investigar, responder e resolver reclamações e problemas.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Retenção de Dados -->
+                    <div class="card privacy-card mb-4">
+                        <div class="card-header">
+                            <h3 id="retencao" class="mb-0">Por Quanto Tempo Mantemos Seus Dados Pessoais</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>Mantemos suas informações pessoais apenas pelo tempo necessário para lhe fornecer os
+                                serviços e cumprir as finalidades contidas nesta Política. Esse também é o caso de
+                                qualquer empresa com quem compartilhamos suas informações pessoais e que presta serviços
+                                em nosso nome. Os períodos de retenção podem variar com base no tipo de informação e em
+                                como são usadas.</p>
+
+                            <p>Nossos períodos de retenção são baseados em critérios que incluem diretrizes ou
+                                necessidades operacionais ou períodos de retenção legalmente exigidos. Quando não
+                                precisarmos mais usar suas informações pessoais e não houver necessidade de mantê-las em
+                                conformidade com nossas obrigações legais ou regulamentares, removeremos essas
+                                informações de nossas bases ou as despersonalizaremos para que não seja possível
+                                relacioná-las a você.</p>
+                        </div>
+                    </div>
+
+                    <!-- Política de Cookies -->
+                    <div class="card privacy-card mb-4">
+                        <div class="card-header">
+                            <h3 id="cookies" class="mb-0">Política de Uso de Cookies</h3>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="section-title">O que são cookies</h5>
+                            <p>Como é prática comum em quase todos os sites profissionais, este Site usa cookies, que
+                                são pequenos arquivos baixados no seu computador para melhorar sua experiência. Esta
+                                Política descreve quais informações os cookies coletam, como as usamos e por que às
+                                vezes precisamos armazenar esses cookies. Também compartilharemos como você pode impedir
+                                que esses cookies sejam armazenados, no entanto, isso pode comprometer certos elementos
+                                da funcionalidade do Site.</p>
+
+                            <h5 class="section-title">Como usamos os cookies</h5>
+                            <p>Utilizamos cookies por vários motivos conforme detalhado abaixo. Na maioria dos casos,
+                                não existem opções padronizadas em todo o setor para desativar os cookies sem inabilitar
+                                completamente a funcionalidade e os recursos que eles adicionam a este Site. Portanto, é
+                                recomendável que você mantenha ativos todos os cookies se não tiver certeza se precisa
+                                ou não deles para usar um dos nossos serviços.</p>
+
+                            <h5 class="section-title">Como desativar cookies</h5>
+                            <p>Você pode impedir a configuração de cookies ajustando as configurações do seu navegador
+                                (consulte a ajuda do navegador para saber como fazer isso). Esteja ciente de que a
+                                desativação de cookies afetará a funcionalidade deste e de muitos outros sites que você
+                                visita. A desativação de cookies geralmente resultará na desativação de determinadas
+                                funcionalidades e recursos deste Site. Portanto, é recomendável que você não desative os
+                                cookies.</p>
+
+                            <h5 class="section-title">Cookies que definimos</h5>
+                            <ul>
+                                <li><strong>Cookies relacionados à conta:</strong> Se você criar uma conta conosco,
+                                    usaremos cookies para o gerenciamento do processo de inscrição e administração
+                                    geral.</li>
+                                <li><strong>Cookies relacionados ao login:</strong> Utilizamos cookies quando você está
+                                    logado, para que possamos lembrar dessa ação.</li>
+                                <li><strong>Cookies relacionados a informativos por e-mail:</strong> Este Site oferece
+                                    serviços de assinatura de e-mail marketing e os cookies podem ser usados para
+                                    lembrar se você já está registrado.</li>
+                                <li><strong>Cookies relacionados a pesquisas:</strong> Periodicamente, oferecemos
+                                    pesquisas e questionários para fornecer informações interessantes.</li>
+                                <li><strong>Cookies relacionados a formulários:</strong> Quando você envia dados por
+                                    meio de um formulário, os cookies podem ser configurados para lembrar os detalhes do
+                                    usuário.</li>
+                                <li><strong>Cookies de preferências do site:</strong> Para proporcionar uma ótima
+                                    experiência neste Site, fornecemos a funcionalidade para definir suas preferências.
+                                </li>
+                                <li><strong>Cookies de terceiros:</strong> Em alguns casos especiais, também usamos
+                                    cookies fornecidos por terceiros confiáveis.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!--Direitos -->
+                    <div class="card privacy-card mb-4">
+                        <div class="card-header">
+                            <h3 id="direitos" class="mb-0">Seus Direitos</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>Em cumprimento à regulamentação aplicável, no que diz respeito ao tratamento de dados
+                                pessoais, em especial a Lei Geral de Proteção de Dados (Lei Federal nº 13.709/2018), a
+                                ALFAVET respeita e garante ao Usuário a possibilidade de apresentação de solicitações
+                                baseadas nos seguintes direitos:</p>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <ul>
+                                        <li>A confirmação da existência de tratamento</li>
+                                        <li>O acesso aos dados</li>
+                                        <li>A correção dos dados quando incompletos, inexatos ou desatualizados</li>
+                                        <li>A anonimização, bloqueio ou eliminação de dados desnecessários, excessivos
+                                            ou tratados em desconformidade com a Lei</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <ul>
+                                        <li>A eliminação dos dados tratados com consentimento do Usuário, exceto nas
+                                            hipóteses de guarda legal</li>
+                                        <li>A obtenção de informações sobre as entidades públicas ou privadas com as
+                                            quais a ALFAVET compartilhou seus dados</li>
+                                        <li>A informação sobre a possibilidade de não fornecer o seu consentimento, bem
+                                            como de ser informado sobre as consequências, em caso de negativa</li>
+                                        <li>A revogação do consentimento</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="contact-info">
+                                <h5 class="mb-3">Como exercer seus direitos</h5>
+                                <p>Para realizar qualquer uma das ações citadas, basta que você entre em contato:</p>
+                                <ul>
+                                    <li><strong>WhatsApp:</strong> (11) 3181-9933</li>
+                                    <li><strong>Telefone:</strong> 4020-0038</li>
+                                </ul>
+
+                                <h6 class="mt-4">Remoção de dados pessoais</h6>
+                                <p>Todos os dados pessoais obtidos e armazenados poderão ser deletados mediante
+                                    solicitação através do nosso WhatsApp (11) 3181-9933, telefone 4020-0038 ou
+                                    formulário de contato.</p>
+                                <p>A ALFAVET irá remover os dados solicitados e manter apenas os registros necessários
+                                    para guarda legal de acordo com a legislação vigente.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contato -->
+                    <div class="card privacy-card mb-4">
+                        <div class="card-header">
+                            <h3 id="contato" class="mb-0">Contato e Atualizações</h3>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="section-title">Atualizações na Política de Privacidade e Uso de Cookies</h5>
+                            <p>Reservamo-nos o direito de modificar esta Política a qualquer momento, de modo que
+                                sugerimos que você a revise periodicamente. Alterações e esclarecimentos terão efeito
+                                imediato após sua publicação no Site. Se fizermos alterações materiais nesta Política,
+                                notificaremos isto aqui para que você se mantenha ciente sobre o tratamento que adotamos
+                                em relação aos seus dados.</p>
+
+                            <h5 class="section-title">Dúvidas e solicitações</h5>
+                            <p>Se você tiver qualquer dúvida sobre como lidamos com dados dos nossos usuários ou tiver
+                                alguma solicitação, entre em contato conosco:</p>
+
+                            <div class="row gp">
+                                <div class="col-md-6">
+                                    <div class="card border-0  bg-light h-100">
+                                        <div class="card-body text-center">
+                                            <img src="styles/img/icon/phone2.png" width="44px">
+                                            <h5>Telefone</h5>
+                                            <p class="mb-0">4020-0038</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card border-0 bg-light h-100">
+                                        <div class="card-body text-center">
+                                            <img src="styles/img/icon/whatsapp2.png" width="44px">
+                                            <h5>WhatsApp</h5>
+                                            <p class="mb-0">(17) 99758-5762</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a href="#" class="back-to-top" id="backToTop">
+            <i class="bi bi-arrow-up"></i>
+        </a>
+
+        <!--Cookies-->
+        <div id="cookieConsent" class="cookie-consent fixed-bottom p-3" role="dialog" aria-live="polite"
+            aria-label="Aviso de cookies" aria-hidden="true">
+            <div class="card bg-light border-0">
+                <div class="card-body d-flex flex-column flex-lg-row align-items-center gap-3">
+                    <div class="me-lg-3">
+                        <strong>Usamos cookies</strong>
+                        <div class="small text-muted">Este site utiliza cookies para melhorar a experiência. Ao
+                            continuar,
+                            você concorda com o uso de cookies.</div>
+                    </div>
+
+                    <div class="ms-lg-auto d-flex gap-2">
+                        <a href="pl.html" class="btn btn-outline-secondary btn-sm align-self-center">Política de
+                            Privacidade</a>
+                        <button id="btnCookieAccept" class="btn btn-primary btn-sm">Continuar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!--Cookies-->
+
+    <div id="cookieConsent" class="cookie-consent fixed-bottom p-3" role="dialog" aria-live="polite"
+        aria-label="Aviso de cookies" aria-hidden="true">
+        <div class="card bg-light border-0">
+            <div class="card-body d-flex flex-column flex-lg-row align-items-center gap-3">
+                <div class="me-lg-3">
+                    <strong>Usamos cookies</strong>
+                    <div class="small text-muted">Este site utiliza cookies para melhorar a experiência. Ao continuar,
+                        você concorda com o uso de cookies.</div>
+                </div>
+
+                <div class="ms-lg-auto d-flex gap-2">
+                    <a href="pl.html" class="btn btn-outline-secondary btn-sm align-self-center">Política de
+                        Privacidade</a>
+                    <button id="btnCookieAccept" class="btn btn-primary btn-sm">Continuar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!---->
+
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="header-footer d-flex justify-content-center">
+                    <img class="img-footer mt-4" src="styles/img/icon/logo.png" width="290" height="78px">
+                </div>
+                <div class="separator-line"></div>
+                <div class="cop text-center">© 2025 - Todos os direitos reservados - ALFAVET</div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/10.5.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.5.2/firebase-auth-compat.js"></script>
+    <script src="styles/js/bootstrap.js"></script>
+    <script src="styles/js/main.js" defer></script>
+</body>
+
+</html>
